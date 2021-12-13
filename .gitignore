@@ -25,11 +25,11 @@ yarn-error.log*
 # package-lock.json
 #folder
 src/CounterComponent
-src/timer
+# src/timer
  src/ComponentsTodo
 src/GitUserSearch
 src/StyledComponents
 src/Car
-
+src/userInputTimer
 # database
- carData.json
+carData.json

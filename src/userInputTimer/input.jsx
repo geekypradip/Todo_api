@@ -2,6 +2,7 @@ import { useState } from "react";
 
 function InputTimer({handleTimer}) {
     const [timer,setTimer]=useState(0);
+    const [disabled,setDisabled]=useState(false);
     return ( 
             
         <div>
@@ -10,9 +11,16 @@ function InputTimer({handleTimer}) {
             value={timer}
             onChange={(e)=>setTimer(e.target.value)}
             />
-            <button onClick={()=>handleTimer(timer)}>Start</button>
+            <button 
+            disabled={disabled}
+            onClick={()=>{
+
+                handleTimer(timer)
+               setDisabled(true)
+            }}>Start</button>
         </div>
      );
+
 }
 
 export default InputTimer;
